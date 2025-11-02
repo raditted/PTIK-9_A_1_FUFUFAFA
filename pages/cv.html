@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasil CV Anda</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 p-10">
     <div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         <div class="p-8">
             <div class="flex gap-3 justify-between">
-                <div class="">
+                <div class="flex flex-col">
                     <h1 id="cv-nama" class="text-3xl font-bold text-gray-900"></h1>
                     <div class="mt-4 space-y-1 text-gray-600">
                         <p><strong>Tempat, Tgl Lahir:</strong> <span id="cv-ttl"></span></p>
@@ -22,7 +29,14 @@
                         <p><strong>Telepon:</strong> <span id="cv-telp"></span></p>
                     </div>
                 </div>
-                <div class="w-56 h-48 bg-gray-200"></div>
+                <div class="w-56 h-48 flex items-center justify-center bg-gray-100 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-32 h-32 text-gray-400" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
 
             </div>
 
@@ -53,15 +67,14 @@
             </div>
         </div>
     </div>
-    <div class="">
+    <div class="no-print">
         <a href="../index.html"
             class="inline-block bg-amber-500 p-2 font-normal text-white rounded-lg text-sm border-2 border-black shadow-[0_6px_0_0_rgba(0,0,0,1)] transform hover:translate-y-2.5 hover:shadow-none">
             Kembali ke Form</a>
-        <a href="#"
+        <a href="#" onclick="window.print();"
             class="inline-block bg-red-500 p-2 font-normal text-white rounded-lg text-sm border-2 border-black shadow-[0_6px_0_0_rgba(0,0,0,1)] transform hover:translate-y-2.5 hover:shadow-none">
             Cetak PDF</a>
     </div>
-
     <script src="../index.js"></script>
 </body>
 
