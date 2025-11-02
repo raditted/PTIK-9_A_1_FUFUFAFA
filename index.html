@@ -56,13 +56,15 @@
                     <div class="mb-4">
                         <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap:</label>
                         <input type="text" id="nama" name="nama"
-                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required
+                            maxlength="100">
                     </div>
 
                     <div class="mb-4">
                         <label for="ttl" class="block text-sm font-medium text-gray-700">Tempat, Tanggal Lahir:</label>
                         <input type="text" id="ttl" name="ttl" placeholder="Contoh: Bandung, 1 Januari 2000"
-                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-xs sm:placeholder:text-sm md:placeholder:text-base lg:placeholder:text-base"
+                            required maxlength="100">
                     </div>
 
                     <div class="mb-4">
@@ -78,27 +80,30 @@
                     <div class="mb-4">
                         <label for="alamat" class="block text-sm font-medium text-gray-700">Alamat Sekarang:</label>
                         <input type="text" id="alamat" name="alamat"
-                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required
+                            maxlength="255">
                     </div>
 
                     <div class="mb-4">
                         <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
                         <input type="email" id="email" name="email"
-                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required>
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" required
+                            maxlength="100">
                     </div>
 
                     <div class="mb-4">
                         <label for="telp" class="block text-sm font-medium text-gray-700">Telepon:</label>
                         <input type="tel" id="telp" name="telp"
-                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
+                            maxlength="20">
                     </div>
 
                     <div class="mb-4">
                         <label for="pendidikan_sma" class="block text-sm font-medium text-gray-700">Pendidikan
                             SMA/Sederajat:</label>
                         <input type="text" id="pendidikan_sma" name="pendidikan_sma"
-                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
-                            placeholder="Contoh: SMA Negeri 1 Ngawi Selatan, IPA">
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-xs sm:placeholder:text-sm md:placeholder:text-base lg:placeholder:text-base"
+                            placeholder="Contoh: SMA Negeri 1 Ngawi Selatan, IPA" maxlength="150">
                     </div>
 
                     <div class="mb-4">
@@ -106,7 +111,7 @@
                             Tinggi (opsional):</label>
                         <input type="text" id="pendidikan_pt" name="pendidikan_pt"
                             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-xs sm:placeholder:text-sm md:placeholder:text-base lg:placeholder:text-base"
-                            placeholder="Contoh: 2023-2026 D3 Teknik Informatika, Polban Bandung">
+                            placeholder="Contoh: 2023-2026 D3 Teknik Informatika, Polban Bandung" maxlength="150">
                     </div>
 
                     <div class="mb-4">
