@@ -1,1 +1,3 @@
 tailwind.config.ts
+*.docx
+*.pdf
