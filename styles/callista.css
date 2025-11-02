@@ -37,7 +37,7 @@ body {
 .hero {
     position: relative;
     height: 60vh; 
-    background-image: url('../img/img_callista/cats.jpg'); 
+    background-image: url('cats.jpg'); 
     background-position: center;
     display: flex;
     justify-content: center;
@@ -73,10 +73,7 @@ body {
     margin: 0;
 }
 
-.education-container {
-    padding: 40px;
-}
-
+/* HAPUS .education-container LAMA DARI SINI */
 
 .description-with-image {
     display: flex; 
@@ -121,55 +118,170 @@ body {
     .description-with-image {
         flex-direction: column; 
         gap: 30px;
+
+    }
+    .navbar {
+        flex-direction: column; 
+        align-items: center;    
+        gap: 10px;              
+        padding-top: 20px;
+    }
+    .nav-buttons {
+        margin-left: 0; }
+    .hello {
+        font-size: 4.5em; 
+    }
+    .ntmy {
+        font-size: 1.1em; 
+    }
+    .education-table td {
+        word-break: break-word; 
     }
     
-    .education-grid {
-        grid-template-columns: 1fr;
+    .education-table thead {
+        display: none; 
+    }
+    .education-table, 
+    .education-table tbody, 
+    .education-table tr, 
+    .education-table td {
+        display: block; 
+        width: 100%;
+        box-sizing: border-box; 
+    }
+    .education-table tr {
+        margin-bottom: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+    .education-table td {
+        text-align: right; 
+        padding: 15px 20px 15px 40%;; 
+        position: relative;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .education-table tr:last-child td:last-child,
+    .education-table tr td:last-child {
+        border-bottom: 0;
+    }
+    .education-table td::before {
+        content: attr(data-label); 
+        position: absolute;
+        left: 20px;
+        width: 35%;
+        padding-right: 10px;
+        text-align: left; 
+        font-weight: 600;
+        color: #333; 
     }
 }
 
-.education-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px;
-    max-width: 1000px; 
+.main-content {
+    padding: 20px 40px 40px 40px; 
+    max-width: 1000px;
     margin: 0 auto; 
 }
 
-.education-card {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.education-section,
+.skills-section,
+.achievements-section {
+    margin-bottom: 50px; 
 }
 
-/* BLOK .education-image SUDAH DIHAPUS */
-
-.education-info {
-    padding: 20px; 
-    text-align: left; 
-}
-
-.education-info h3 {
-    font-size: 1.2em; 
-    margin: 0 0 5px 0;
-    color: #000; 
-}
-
-.education-info .education-detail {
-    font-size: 1em; 
-    margin: 0 0 10px 0;
+.education-section h2,
+.skills-section h2,
+.achievements-section h2 {
+    font-size: 2em;
+    font-weight: 600;
     color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
 }
 
-.education-info .education-years {
-    font-size: 0.9em; 
-    margin: 0;
-    color: #777; 
+.table-container {
+    width: 100%;
+    overflow-x: auto; 
+}
+.education-table {
+    width: 100%;
+    border-collapse: collapse; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
 }
 
-.education-card:hover {   
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
+.education-table th,
+.education-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0; 
+}
+
+.education-table th {
+    background-color: #f9f9f9; 
+    font-weight: 600;
+}
+
+.education-table tbody tr:last-child th,
+.education-table tbody tr:last-child td {
+    border-bottom: 0; 
+}
+
+.education-table tbody tr:hover {
+    background-color: #fcfcf9; 
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.skill-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
     transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.achievements-section ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.achievements-section li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px; 
+    position: relative;
+    padding-left: 40px; 
+}
+
+.achievements-section li::before {
+    content: '🏆'; 
+    position: absolute;
+    left: 15px;
+    top: 19px;
+    font-size: 1em;
+}
+
+.achievements-section li:last-child {
+    margin-bottom: 0;
 }
